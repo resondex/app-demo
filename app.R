@@ -59,6 +59,28 @@ requireNamespace("igraph", quietly = TRUE)
 # Suggests + dev-time tail. ----
 requireNamespace("work", quietly = TRUE)
 
-# ---- Load + serve ----
-app <- readRDS("app_object.rds")
-app
+mod_turf <- work::app_deliverable_add_turf(
+  best_combo_results = readRDS("obj_turf_results.rds"),
+  raw       = work::example_data_ice_cream,
+  vars      = work::example_data_ice_cream_dictionary$variable,
+  subgroups = c("Total", "Gen_Z", "Millennials", "Gen_X"),
+  weight    = "weight",
+  labels    = work::example_data_ice_cream_dictionary,
+  project_name = "Ice Cream Study - (12345)"
+)
+
+mod_bn <- work::app_deliverable_network_drivers(
+  results  = list("Network Drivers" = readRDS("obj_bn_final.rds")),
+  physics = FALSE,
+  add_additional_results = TRUE    # show Impacts + Prioritization tabs
+)
+
+work::app_deliverable(
+  title        = "Example Project",
+  modules      = list(
+    "Network Drivers" = mod_bn,
+    "TURF" = mod_turf
+  ),
+  save_restore = FALSE, 
+  nested = FALSE
+)

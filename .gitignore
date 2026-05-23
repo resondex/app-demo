@@ -1,0 +1,17 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# rsconnect deploy artifacts
+rsconnect/
+.posit/
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/

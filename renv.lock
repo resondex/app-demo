@@ -5,6 +5,26 @@
       {
         "Name": "CRAN",
         "URL": "https://packagemanager.posit.co/cran/latest"
+      },
+      {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.20/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.20/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.20/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.20/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.20/books"
       }
     ]
   },
@@ -10081,8 +10101,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "tsolloway",
       "RemoteRepo": "work",
-      "RemoteRef": "6ec61c09c917cb4af690cf727224a325b05e5250",
-      "RemoteSha": "6ec61c09c917cb4af690cf727224a325b05e5250"
+      "RemoteRef": "497c1593b027864c5f445ac1479280abc82776a3",
+      "RemoteSha": "497c1593b027864c5f445ac1479280abc82776a3"
     },
     "xfun": {
       "Package": "xfun",
